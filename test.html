@@ -1,0 +1,28 @@
+<!doctype html>
+  <script src="jspm_packages/system@0.6.js"></script>
+  <script src="config.js"></script>
+
+  <script>
+    System.import('~/markdown-component')
+    .catch(function(e) {
+      setTimeout(function() {
+        throw e;
+      });
+    });
+  </script>
+
+
+  <body>
+    <x-markdown>
+      YAY
+      ===
+
+      This is a markdown component
+
+      ```
+        with markdown features
+      ```
+
+      * amazing
+    </x-markdown>
+  </body>

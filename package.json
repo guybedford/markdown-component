@@ -1,0 +1,6 @@
+{
+  "registry": "jspm",
+  "dependencies": {
+    "showdown": "^0.3.1"
+  }
+}

@@ -1,12 +1,15 @@
-var showdown = require('showdown');
+import showdown from 'showdown';
+import prism from 'prism';
+
+import 'prism/themes/prism-okaidia.css!';
+
 var converter = new showdown.converter();
 
-document.registerElement('x-markdown', {
-  prototype: {
-    createdCallback: function() {
-      this.innerHTML = converter.makeHtml(this.innerHTML.split('\n').map(function(line) {
-        return line.trim();
-      }).join('\n'));
-    }
+export class XMarkdownComponent extends HTMLElement {
+  createdCallback() {
+    this.innerHTML = converter.makeHtml(
+      this.innerHTML.split('\n').map((line) => line.trim()).join('\n')
+    );
+    prism.highlightElement(this.querySelector('code'));
   }
-});
+}

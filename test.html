@@ -3,7 +3,9 @@
   <script src="config.js"></script>
 
   <script>
-    System.import('~/markdown-component')
+    System.import('~/markdown-component').then(function(m) {
+      document.registerElement('x-markdown-component', m.XMarkdownComponent);
+    })
     .catch(function(e) {
       setTimeout(function() {
         throw e;
@@ -13,14 +15,19 @@
 
 
   <body>
-    <x-markdown>
+    <x-markdown-component>
       YAY
       ===
 
       This is a markdown component
 
-      ```
-        with markdown features
+      ```language-javascript
+        System.import('jspm');
+
+        // a comment
+        $(document).ready(function() {
+
+        });
       ```
 
       * amazing

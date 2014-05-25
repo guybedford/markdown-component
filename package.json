@@ -1,5 +1,4 @@
 {
-  "name": null,
   "registry": "jspm",
   "dependencies": {
     "showdown": "github:coreyti/showdown@^0.3.1",

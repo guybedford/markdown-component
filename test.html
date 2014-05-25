@@ -3,9 +3,7 @@
   <script src="config.js"></script>
 
   <script>
-    System.import('~/markdown-component').then(function(m) {
-      document.registerElement('x-markdown-component', m.XMarkdownComponent);
-    })
+    System.import('~/markdown-component')
     .catch(function(e) {
       setTimeout(function() {
         throw e;

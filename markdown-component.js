@@ -13,3 +13,4 @@ export class XMarkdownComponent extends HTMLElement {
     prism.highlightElement(this.querySelector('code'));
   }
 }
+document.registerElement('x-markdown-component', XMarkdownComponent);

@@ -3,6 +3,6 @@
   "dependencies": {
     "showdown": "github:coreyti/showdown@^0.3.1",
     "prism": "gh-pages",
-    "css": "master"
+    "css": "0.1.0"
   }
 }
